@@ -760,16 +760,16 @@ body {
     margin-bottom: 12px;
 }
 .modal-note {
-    font-size: 400;
+    font-weight: 400;
     font-size: 12px;
     line-height: 1.67;
     letter-spacing: 0.01em;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
 }
 .modal-input-wrapper {
     position: relative;
     display: block;
-    margin-bottom: 10px;
+    margin-top: 4px;
 }
 .modal-input {
     width: 100%;
@@ -868,7 +868,6 @@ body {
     color: var(--main-fon);
     background: var(--color-acsent);
     padding: 10px 55px;
-    margin-top: 30px;
     transition: background-color var(--transition-function);
 }
 
