@@ -3,10 +3,12 @@
     --color-acsent: rgb(33, 150, 243);
     --title-color: #212121;
     --text-color: #757575;
+    --contacts-link-color: rgba(255, 255, 255, 0.6);
     --main-fon: #fff;
     --h-title-color: #000;
     --hero-fot-color: #2f303a;
     --team-color: #f5f4fa;
+
     --gradient-color: rgba(47, 48, 58, 0.4);
     --icon-color: #afb1b8;
     --tipeofwork-name-color: rgba(47, 48, 58, 0.8);
@@ -14,7 +16,7 @@
     --modal-fon-color: rgba(0, 0, 0, 0.2);
     --color-acsent-hover: #188ce8;
     --input-border-color: rgba(33, 33, 33, 0.2);
-    --transition-function: var(--transition-function);
+    --transition-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* NONE */
@@ -350,7 +352,7 @@ body {
 }
 
 .team-card {
-    background: #ffffff;
+    background: var(--main-fon);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -394,14 +396,12 @@ body {
 
 .social-icon {
     fill: var(--icon-color);
-    justify-content: center;
     transition: fill var(--transition-function);
 }
 
 .social-link:hover,
 .social-link:focus {
     background-color: var(--color-acsent);
-    color: var(--main-fon);
 }
 
 .social-link:hover .social-icon,
@@ -430,7 +430,7 @@ body {
 .client-link:focus,
 .client-link:hover {
     color: var(--color-acsent);
-    border: 1px solid rgba(33, 150, 243, 1);
+    border: 1px solid var(--color-acsent);
 }
 .client-icon-box {
     display: flex;
@@ -492,7 +492,7 @@ body {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: inherit;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--contacts-link-color);
     padding: 0;
     transition: color var(--transition-function);
 }
@@ -544,12 +544,23 @@ body {
 .folowus-form-input {
     width: 100%;
     height: 50px;
+    padding: 15px 16px;
+    background-color: transparent;
+    color: var(--main-fon);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     cursor: pointer;
     transition: border-color var(--transition-function), outline var(--transition-function);
+}
+.folowus-form-input:placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    color: var(--contacts-link-color);
 }
 
 .folowus-form-input:focus,
@@ -722,6 +733,7 @@ body {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    padding: 40px;
 }
 
 .close-btn {
@@ -749,7 +761,6 @@ body {
 .modal-form {
     display: flex;
     flex-direction: column;
-    padding: 40px;
 }
 
 .modal-head {
@@ -757,19 +768,19 @@ body {
     line-height: 1.15;
     text-align: center;
     color: var(--title-color);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 .modal-note {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.67;
     letter-spacing: 0.01em;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 .modal-input-wrapper {
     position: relative;
     display: block;
-    margin-top: 4px;
+    /* margin-top: 4px; */
 }
 .modal-input {
     width: 100%;
@@ -819,10 +830,12 @@ body {
 .modal-checkbox-label {
     display: flex;
     align-items: center;
+    justify-content: center;
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.71;
+    line-height: 1.72;
     margin-bottom: 30px;
+    margin-top: 14px;
 }
 
 .modal-checkbox-label::before {
@@ -851,12 +864,16 @@ body {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.modal-checkbox-label-link {
+    color: var(--color-acsent);
+}
+
 .modal-form-submit {
     align-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0px;
+    border: 1px;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     font-style: inherit;
